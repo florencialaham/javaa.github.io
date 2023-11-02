@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programas JavaScript</title>
+</head>
+<body>
+    <h2>Punto 1 - Par o Impar en una lista de números:</h2>
+    <script>
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        function ParoImpar(numero) {
+            if (numero % 2 === 0) {
+                return "par";
+            } else {
+                return "impar";
+            }
+        }
+
+        for (let i = 0; i < numeros.length; i++) {
+            console.log(`El número ${numeros[i]} es ${ParoImpar(numeros[i])}`);
+        }
+    </script>
+
+    <h2>Punto 7 - Evaluación de Alumnos:</h2>
+    <script>
+        function evaluacionAlumno(nombre, nota) {
+            if (nota > 4) {
+                console.log(`El alumno ${nombre} aprobó`);
+            } else {
+                console.log(`El alumno ${nombre} reprobó la cursada`);
+            }
+        }
+
+        evaluacionAlumno("Juan", 7);
+        evaluacionAlumno("Martín", 3);
+    </script>
+
+    <h2>Punto 9 - Equipos y Jugadores:</h2>
+    <script>
+        const equipoAzul = ["Joaquín", "Diego", "Martín", "Moi"];
+        const equipoAmarillo = ["Jorge", "Jon", "Luis", "Ricky"];
+
+        function quéEquipoEs(jugador) {
+            if (equipoAzul.includes(jugador)) {
+                console.log(`El jugador ${jugador} es del equipo Azul.`);
+            } else if (equipoAmarillo.includes(jugador)) {
+                console.log(`El jugador ${jugador} es del equipo Amarillo.`);
+            } else {
+                console.log(`El jugador ${jugador} no está en ningún equipo.`);
+            }
+        }
+
+        quéEquipoEs("Joaquín");
+
+        function mostrarEquiposCompleto(jugador) {
+            if (jugador.toLowerCase() === "todos") {
+                console.log("Equipo Azul: " + equipoAzul.join(", "));
+                console.log("Equipo Amarillo: " + equipoAmarillo.join(", "));
+            } else {
+                quéEquipoEs(jugador);
+            }
+        }
+    </script>
+</body>
+</html>
